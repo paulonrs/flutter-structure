@@ -39,6 +39,11 @@ class MyApp extends StatelessWidget {
           page: makeTela2Page,
           transition: Transition.fade,
         ),
+        GetPage(
+          name: AppRoutes.pageName(AppPages.tela3),
+          page: makeTela3Page,
+          transition: Transition.fade,
+        ),
       ],
     );
   }

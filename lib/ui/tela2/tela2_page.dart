@@ -11,9 +11,17 @@ class Tela2Page extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Tela 2')),
       body: Center(
-        child: ElevatedButton(
-          onPressed: presenter.goToTela1Page,
-          child: const Text('Voltar para Tela 1'),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: presenter.goToTela3Page,
+              child: const Text('Ir para Tela 3'),
+            ),
+            ElevatedButton(
+              onPressed: presenter.goToTela1Page,
+              child: const Text('Voltar para Tela 1'),
+            ),
+          ],
         ),
       ),
     );

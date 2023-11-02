@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'tela3_presenter.dart';
 
-import '../../infra/appRoutes/app_pages.dart';
-
-class Tela3 extends StatelessWidget {
-  const Tela3({super.key});
+class Tela3Page extends StatelessWidget {
+  final Tela3Presenter presenter;
+  const Tela3Page({super.key, required this.presenter});
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +11,9 @@ class Tela3 extends StatelessWidget {
       appBar: AppBar(title: const Text('Tela 3')),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
-            Get.toNamed(AppRoutes.pageName(
-                AppPages.tela1)); // Use o enum para navegar de volta para Tela1
-          },
+          onPressed: presenter
+              .goToTela2Page // Use o enum para navegar de volta para Tela1
+          ,
           child: const Text('Voltar para Tela 2'),
         ),
       ),
